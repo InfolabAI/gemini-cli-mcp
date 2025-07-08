@@ -126,21 +126,21 @@ You can call Gemini CLI using the MCP server in Claude Code. For example:
 ╰───────────────────────────────────────────────────╯
 
 
-> gemini 로 gemini_mcp_server.py 요약 분석 진행해
+> Analyze gemini_mcp_server.py file using gemini
 
 ● I'll analyze the gemini_mcp_server.py file using the Gemini MCP server to provide a summary.
 
-● gemini-mcp-server:run_gemini (MCP)(prompt: "이 Python 파일의 주요 기능과 구조를 한국어로 요약해주세요. 클래스, 함수, 주요 로직을 포함해서 분석해주세요.", file_dir_url_path:
+● gemini-mcp-server:run_gemini (MCP)(prompt: "Please summarize the main functions and structure of this Python file. Include classes, functions, and key logic.", file_dir_url_path:
                                     "gemini_mcp_server.py")
   ⎿ { 
-    "result": "This Python file (`gemini_mcp_server.py`) serves as a wrapper to call the Gemini CLI tool externally through an MCP (Multi-Agent Communication Protocol) server..."
+    "result": "This Python file (`gemini_mcp_server.py`) serves as a wrapper to call the Gemini CLI tool externally through an MCP (Multi-Agent Communication Protocol) server. It uses FastMCP framework to initialize an MCP server instance and provides a `run_gemini` function as a tool that can be called externally through the MCP server..."
     }
 ```
 
 - Final output from Claude Code using Gemini's response
 
 ```
-● gemini_mcp_server.py is a file that wraps Gemini CLI as an MCP server. It uses the FastMCP framework to provide the run_gemini tool, receives prompts and file paths, executes Gemini CLI, and returns results. It includes 60-second timeout and error handling.
+● gemini_mcp_server.py is a file that wraps Gemini CLI as an MCP server. It uses the FastMCP framework to provide the run_gemini tool, receives prompts and file paths, executes Gemini CLI, and returns results. It includes 360-second timeout and error handling.
 ```
 
 ## 📚 Learning Guide
