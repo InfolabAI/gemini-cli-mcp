@@ -1,11 +1,14 @@
 # Gemini MCP Server
 
+> [English Version](README_EN.md)
+
 Claude Code에서 Gemini AI를 MCP 서버로 사용할 수 있게 해주는 도구입니다.
 
 ## 주요 이점
 
 1. **대용량 파일 분석**: Gemini의 거대한 컨텍스트 윈도우를 활용하여 대용량 파일과 디렉토리를 한 번에 분석 가능
 2. **토큰 절약**: 무료로 제공되는 Gemini CLI를 이용해서 Claude Code의 토큰 사용량을 절약하면서도 Claude Code만의 강력한 기능을 활용 가능
+3. **간편한 통합**: 기존 Claude Code 워크플로우에 쉽게 통합 가능
 
 이 서버는 로컬에 설치된 `gemini` CLI 도구를 사용하여 작동합니다.
 
@@ -15,12 +18,12 @@ Claude Code에서 Gemini AI를 MCP 서버로 사용할 수 있게 해주는 도�
 - [uv](https://github.com/astral-sh/uv) 패키지 매니저
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) CLI 도구
 
-## 설치
+## 빠른 시작
 
-- 저장소 클론:
+### 1. 저장소 클론
 ```bash
-git clone <repository-url>
-cd mcp-gemini
+git clone https://github.com/InfolabAI/gemini-cli-mcp.git
+cd gemini-cli-mcp
 ```
 
 - uv 설치
