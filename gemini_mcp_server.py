@@ -54,7 +54,7 @@ def run_gemini(prompt: str, file_dir_url_path: str) -> dict:
         return {"result": result.stdout.strip()}
 
     except subprocess.TimeoutExpired:
-        return {"error": "Gemini 실행 시간 초과 (60초)"}
+        return {"error": "Gemini 실행 시간 초과 (360초)"}
     except FileNotFoundError:
         return {"error": "Gemini CLI가 설치되어 있지 않습니다. 'gemini' 명령을 사용할 수 있는지 확인하세요."}
     except Exception as e:
