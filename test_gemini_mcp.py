@@ -18,7 +18,7 @@ async def test_gemini_mcp():
     server_params = StdioServerParameters(
         command="uv",
         args=["run", "python",
-              "/home/hee/Dropbox/projects/mcp-gemini/gemini_mcp_server.py"],
+              "gemini_mcp_server.py"],
         env={}
     )
 
