@@ -1,0 +1,12 @@
+[project]
+name = "gemini-mcp-server"
+version = "0.1.0"
+description = "MCP server for Gemini CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]",
+]
+
+[project.scripts]
+gemini-mcp-server = "gemini_mcp_server:mcp.run"
