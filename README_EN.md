@@ -79,6 +79,8 @@ For Linux, add the following configuration to your `~/.claude.json` file:
     "gemini": {
       "command": "uv",
       "args": [
+        "--directory",
+        "/path/to/your/project",
         "run",
         "python",
         "/path/to/your/project/gemini_mcp_server.py"

@@ -69,6 +69,8 @@ Linux 의 경우, `~/.claude.json` 파일에 다음 설정을 추가:
     "gemini": {
       "command": "uv",
       "args": [
+        "--directory",
+        "/path/to/your/project",
         "run",
         "python",
         "/path/to/your/project/gemini_mcp_server.py"
