@@ -12,20 +12,28 @@ mcp = FastMCP("Gemini MCP Server")
 
 
 @mcp.tool()
-def run_gemini(prompt: str, file_dir_url_path: str) -> dict:
+def run_gemini(prompt: str, file_dir_url_path: str, working_directory: str) -> dict:
     """
     Gemini를 사용하여 프롬프트를 실행합니다.
 
     Args:
         prompt: Gemini에 전달할 프롬프트
         file_dir_url_path: 분석할 파일, 디렉토리 또는 URL 경로
+        working_directory: 작업 디렉토리 (필수)
 
     Returns:
         dict: 실행 결과 또는 에러 메시지
     """
 
     prompt = prompt + f" (분석할 파일, 디렉토리 또는 URL 경로: {file_dir_url_path})"
+    
+    # 현재 디렉토리 저장
+    original_cwd = os.getcwd()
+    
     try:
+        # 작업 디렉토리로 변경
+        os.chdir(working_directory)
+        
         # Gemini 명령 실행
         cmd = [
             "gemini",
@@ -59,6 +67,9 @@ def run_gemini(prompt: str, file_dir_url_path: str) -> dict:
         return {"error": "Gemini CLI가 설치되어 있지 않습니다. 'gemini' 명령을 사용할 수 있는지 확인하세요."}
     except Exception as e:
         return {"error": f"실행 중 오류 발생: {str(e)}"}
+    finally:
+        # 원래 디렉토리로 복원
+        os.chdir(original_cwd)
 
 
 if __name__ == "__main__":
