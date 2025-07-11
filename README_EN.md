@@ -66,6 +66,7 @@ uv sync
   - Parameters:
     - `prompt` (string): Prompt to send to Gemini
     - `file_dir_url_path` (string): Path to file, directory, or URL to analyze
+    - `working_directory` (string): Working directory (required)
 
 ## ⚙️ Configuration 
 

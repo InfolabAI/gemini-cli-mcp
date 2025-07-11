@@ -56,6 +56,7 @@ uv sync
   - 입력:
     - `prompt` (string): Gemini에 전달할 프롬프트
     - `file_dir_url_path` (string): 분석할 파일, 디렉토리 또는 URL 경로
+    - `working_directory` (string): 작업 디렉토리 (필수)
 
 ## Configuration 
 
